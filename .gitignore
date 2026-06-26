@@ -1,0 +1,26 @@
+# 秘密情報
+.env
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# scratch（CLAUDE.md 規約）
+temp.py
+temp2.py
+temp.sh
+
+# 別リポジトリ（segfo/tor_mcp。ベンダ資産も含む）
+tor_mcp/
+
+# 実行時状態
+.claude/hooks/mcp_usage_state.json
+
+# アーカイブ
+*.zip
+
+# 調査成果物（PII 含む可能性・第三者資産）
+成果物/
+surveys/
+deepdarkCTI/
