@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "tor-osint": {
+      "command": "uv",
+      "args": ["run", "python", "-m", "tor_mcp"],
+      "env": {
+        "PYTHONUTF8": "1",
+        "PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD": "1",
+        "TOR_MCP_DIRECT_BROWSER": "cdp",
+        "TOR_MCP_CDP_PORT": "9222",
+        "TOR_MCP_CHROME_PROFILE_DIR": "Default"
+      }
+    },
+    "brave-search": {
+      "command": "npx",
+      "args": ["-y", "dotenv-cli", "-e", ".env", "--", "npx", "-y", "@brave/brave-search-mcp-server"]
+    },
+    "tavily": {
+      "command": "npx",
+      "args": ["-y", "dotenv-cli", "-e", ".env", "--", "npx", "-y", "tavily-mcp"]
+    }
+  }
+}
